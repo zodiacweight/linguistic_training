@@ -14,7 +14,9 @@ var AppRouter = Backbone.Router.extend({
         }); /**/
     },
     lookWords: function(language){
-
+        $.when($.get("../html/lookWords.html"), $.get("words.js")).done(function(lookWords, words){
+            $("#content").html(lookWords);
+        });
     },
     passTest: function(language){
 
