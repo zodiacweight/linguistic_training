@@ -15,11 +15,19 @@ var AppRouter = Backbone.Router.extend({
     },
     lookWords: function(language, category){
        console.log("lookWords is here.");
-        $.when($.get("../html/lookWords.html"), $.get(("words.js"))).done(
+        $.when($.get("../html/lookWords.html"), $.get("../words.json")).done(
            function(lookWords, words){
-
-       
-        
+                $("#content").html(lookWords);
+                if($("#content").html()!==""){
+                    if($("#image")){
+                        console.log("words[0][language][category][0]: ", words[0][language][category][0]);
+                        var firstImage = words[0][language][category][0];
+                       // $("#image").html(firstImage);
+                       //$("#image").html("<img src = 'images/portugues/insectos/abelha.jpg'>");
+                        $("#image").html("<img src = 'images/"+language+"/"+category+"/"+firstImage+".jpg'>");
+                    }
+                }
+               // 
             }
         )
     },

@@ -1,4 +1,10 @@
 #lookWords > * {
     float: left;
 }
+#image {
+    width: 94%;
+}
 
+#image > img {
+    width: 100%;
+}
