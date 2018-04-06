@@ -21,7 +21,9 @@ var AppRouter = Backbone.Router.extend({
                 if($("#content").html()!==""){
                     if($("#image")){
                         console.log("words[0][language][category][0]: ", words[0][language][category][0]);
-                        var chosenImages = words[0][language][category];
+                        var chosenImages = defineImages(language, category, words);
+                        pasteImage(chosenImages, 0);
+                        //var chosenImages = words[0][language][category];
                        // $("#image").html(firstImage);
                        //$("#image").html("<img src = 'images/portugues/insectos/abelha.jpg'>");
                         $("#image").html("<img src = 'images/"+language+"/"+category+"/"+chosenImages[0]+".jpg'>");

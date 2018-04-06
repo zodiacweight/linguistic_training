@@ -1,4 +1,15 @@
 
+function defineImages (language, category, words){
+    var chosenImages = words[0][language][category];
+    return chosenImages;
+};
+
+function pasteImage(images, index){
+    if($("#image")){
+        $("#image").html(images[index]);
+    }
+}
+
 function submitForm(){
     event.preventDefault(); // отменить действие по умолчанию
     var checked = $("input:radio:checked");
