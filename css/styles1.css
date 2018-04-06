@@ -1,10 +1,24 @@
+#lookWords {
+    margin-top: 3%;
+}
+
 #lookWords > * {
     float: left;
 }
+
+#lookWords > input {
+    margin-top: 20%;
+}
+
 #image {
-    width: 94%;
+    width: 100%;
 }
 
 #image > img {
     width: 100%;
+}
+
+#title {
+    font-size: 28px;
+    margin-left: 40%;
 }
