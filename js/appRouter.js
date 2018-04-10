@@ -14,20 +14,17 @@ var AppRouter = Backbone.Router.extend({
         }); /**/
     },
     lookWords: function(language, category){
-       console.log("lookWords is here.");
         $.when($.get("../html/lookWords.html"), $.get("../words.json")).done(
            function(lookWords, words){
                 $("#content").html(lookWords);
                 if($("#content").html()!==""){
                     if($("#image")){
-                        console.log("words[0][language][category][0]: ", words[0][language][category][0]);
-                        var chosenImages = defineImages(language, category, words);
-                        pasteImage(chosenImages, 0);
-                        //var chosenImages = words[0][language][category];
-                       // $("#image").html(firstImage);
-                       //$("#image").html("<img src = 'images/portugues/insectos/abelha.jpg'>");
-                        $("#image").html("<img src = 'images/"+language+"/"+category+"/"+chosenImages[0]+".jpg'>");
-                        $("#title").html(chosenImages[0]);
+                        //console.log("words[0][language][category][0]: ", words[0][language][category][0]);
+                        var images = maintainImages.defineImages(words, language, category), path = "images/"+language+"/"+category+"/";
+                        console.log("images: ", images);
+                        maintainImages.pasteImage(images, path, 0);
+                        //$("#image").html("<img src = 'images/"+language+"/"+category+"/"+chosenImages[0]+".jpg'>");
+                        //$("#title").html(images[0]);
                     }
                 }
                // 

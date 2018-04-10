@@ -1,14 +1,29 @@
 
-function defineImages (language, category, words){
+/*var maintainImages = (function (){
     var chosenImages = words[0][language][category];
-    return chosenImages;
-};
-
-function pasteImage(images, index){
-    if($("#image")){
-        $("#image").html(images[index]);
+    return {
+        images: chosenImages,
+        pasteImage: function (path, index){
+            if($("#image")){
+                $("#image").html("<img src="+path+chosenImages[index]+".jpg/>");
+            }
+        }
     }
-}
+})();*/
+
+var maintainImages = {
+    defineImages: function(words, language, category){
+        return words[0][language][category];
+    },
+    pasteImage: function (images, path, index){
+        if($("#image")){
+            $("#image").html("<img src='"+path+images[index]+".jpg'/>");
+        }
+        if($("#title")){
+            $("#title").html(images[index]);
+        }
+    }
+};
 
 function submitForm(){
     event.preventDefault(); // отменить действие по умолчанию

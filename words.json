@@ -8,5 +8,15 @@
                 "insectos": ["abelha", "aranha", "formiga", "libélula", "mariposa"],
                 "legumes": ["batata", "beringela", "pepino", "beterraba", "tomate"],
                 "naturaleza": ["folha", "gelo", "lago", "nuvem", "relva"]
+            },
+            "español": {
+                "animais": ["alce", "antílope", "ardilla", "búfalo", "caballo"],
+                "aves": ["azor", "águila", "estornino", "aveztruz", "gallo"],
+                "bagas": ["fresa", "framboesa", "guinda", "grosella", "sauquillo"],
+                "esporte": ["baloncesto", "billar", "voleibol", "correra", "brinco"],
+                "frutas": ["naranja", "limón", "manzana", "coco", "ciruela"],
+                "insectos": ["abeja", "araña", "hormiga", "libélula", "mariposa"],
+                "legumes": ["patatas", "berenjena", "pepino", "remolacha", "tomate"],
+                "naturaleza": ["hoja", "hielo", "lago", "nube", "herba"]
             }
         }
