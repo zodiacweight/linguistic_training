@@ -13,9 +13,11 @@
 
 var maintainImages = {
     defineImages: function(words, language, category){
-        return words[0][language][category];
+        return words[language][category]; // определение нужного массива изображений
     },
-    pasteImage: function (images, path, index){
+    pasteImage: function (words, index, language, category){
+        var images = this.defineImages(words, language, category);
+        var path = "images/"+language+"/"+category+"/";
         if($("#image")){
             $("#image").html("<img src='"+path+images[index]+".jpg'/>");
         }

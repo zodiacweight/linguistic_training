@@ -9,7 +9,7 @@
                 "legumes": ["batata", "beringela", "pepino", "beterraba", "tomate"],
                 "naturaleza": ["folha", "gelo", "lago", "nuvem", "relva"]
             },
-            "español": {
+            "espanol": {
                 "animais": ["alce", "antílope", "ardilla", "búfalo", "caballo"],
                 "aves": ["azor", "águila", "estornino", "aveztruz", "gallo"],
                 "bagas": ["fresa", "framboesa", "guinda", "grosella", "sauquillo"],

@@ -20,9 +20,8 @@ var AppRouter = Backbone.Router.extend({
                 if($("#content").html()!==""){
                     if($("#image")){
                         //console.log("words[0][language][category][0]: ", words[0][language][category][0]);
-                        var images = maintainImages.defineImages(words, language, category), path = "images/"+language+"/"+category+"/";
-                        console.log("images: ", images);
-                        maintainImages.pasteImage(images, path, 0);
+                        //var images = maintainImages.defineImages(words, language, category);
+                        maintainImages.pasteImage(words[0], 0, language, category);
                         //$("#image").html("<img src = 'images/"+language+"/"+category+"/"+chosenImages[0]+".jpg'>");
                         //$("#title").html(images[0]);
                     }
