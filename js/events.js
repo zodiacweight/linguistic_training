@@ -1,6 +1,6 @@
+
 $("#content").on("click", "#front", function () {
-    defineUrlParams(function changeIndex(curIndex, minLimit, maxLimit){
-        console.log("maxLimit = ", maxLimit, "minLimit = ", minLimit);
+    defineNextImage(function defineNextIndex(curIndex, minLimit, maxLimit){
         if(curIndex==maxLimit){
             curIndex=minLimit;
         }
@@ -12,8 +12,8 @@ $("#content").on("click", "#front", function () {
 });
 
 $("#content").on("click", "#back", function () {
-    defineUrlParams(function changeIndex(curIndex, minLimit, maxLimit){
-        if(curIndex==minLimit-1){
+    defineNextImage(function defineNextIndex(curIndex, minLimit, maxLimit){
+        if(curIndex==minLimit){
             curIndex=maxLimit;
         }
         else {
@@ -22,3 +22,13 @@ $("#content").on("click", "#back", function () {
         return curIndex;
     });
 });
+
+$("#content").on("click", "#change", function(){
+    location.href="";
+});
+
+/**В каждом из этих событий определить:
+ * titles, path, maxIndex (из title), индекс следующего изображения кодом из функции callback, const minIndex = 0,
+ * вызывать pasteImage.
+ * 
+ */

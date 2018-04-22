@@ -6,6 +6,10 @@
     float: left;
 }
 
+#change {
+    margin-left: 3%;
+}
+
 #lookWords > input {
     margin-top: 20%;
 }

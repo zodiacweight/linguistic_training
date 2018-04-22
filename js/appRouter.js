@@ -14,20 +14,22 @@ var AppRouter = Backbone.Router.extend({
         }); /**/
     },
     lookWords: function(language, category){
+        /**
+         *  Знать: words, language, category, path, index=0;
+         * Сделать: вставку изображения.
+         * 
+         */
         $.when($.get("../html/lookWords.html"), $.get("../words.json")).done(
            function(lookWords, words){
                 $("#content").html(lookWords);
+                imageData.changeValues().changeLanguage(language);
+                imageData.changeValues().changeCategory(category);
+                imageData.changeValues().changePath(language, category);
+                imageData.changeValues().changeTitles(words[0]);
+                //console.log(imageData.getValues().titles);
                 if($("#content").html()!==""){
-                    if($("#image")){
-                        //console.log("words[0][language][category][0]: ", words[0][language][category][0]);
-                        //var images = maintainImages.defineImages(words, language, category);
-                        var data = defineData(words[0], language, category);
-                        maintainImages.pasteImage(data, 0);
-                        //$("#image").html("<img src = 'images/"+language+"/"+category+"/"+chosenImages[0]+".jpg'>");
-                        //$("#title").html(images[0]);
-                    }
+                    pasteImage(imageData.getValues().path, 0, imageData.getValues().titles);
                 }
-               // 
             }
         )
     },
